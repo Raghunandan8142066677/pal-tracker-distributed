@@ -1,12 +1,13 @@
 applications:
-- name: tracker-allocations
+- name: tracker-allocationsRaghu
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocations-pal-raghu.apps.dev.pcf-aws.com
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-raghu.apps.dev.pcf-aws.com
+   # REGISTRATION_SERVER_ENDPOINT: https://registration-pal-raghu.apps.dev.pcf-aws.com
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-allocations-database
+  - tracker-service-registry

@@ -1,5 +1,5 @@
 applications:
-- name: tracker-registration
+- name: tracker-registrationRaghu
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: registration-pal-raghu.apps.dev.pcf-aws.com
@@ -9,3 +9,4 @@ applications:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-registration-database
+  - tracker-service-registry
